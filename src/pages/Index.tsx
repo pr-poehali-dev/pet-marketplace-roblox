@@ -186,7 +186,7 @@ const Index = () => {
               <Card key={pet.id} className="overflow-hidden group hover:shadow-xl transition-all duration-300 hover:-translate-y-2 animate-fade-in" style={{ animationDelay: `${index * 100}ms` }}>
                 <CardHeader className="p-0">
                   <div className="relative overflow-hidden bg-gradient-to-br from-primary/10 via-secondary/10 to-accent/10 h-64 flex items-center justify-center group-hover:from-primary/20 group-hover:via-secondary/20 group-hover:to-accent/20 transition-all duration-300">
-                    <Icon name={pet.icon as any} size={120} className="text-primary group-hover:scale-110 transition-transform duration-300" />
+                    <Icon name={pet.icon as any} size={80} className="text-primary group-hover:scale-110 transition-transform duration-300" />
                   </div>
                 </CardHeader>
                 <CardContent className="p-6">
