@@ -22,7 +22,6 @@ const Index = () => {
       id: 1,
       name: 'Космический Друг',
       rarity: 'Обычный',
-      price: 500,
       icon: 'Stars',
       bonus: '+10% к росту растений'
     },
@@ -30,7 +29,6 @@ const Index = () => {
       id: 2,
       name: 'Легендарный Дракон',
       rarity: 'Легендарный',
-      price: 5000,
       icon: 'Flame',
       bonus: '+50% к доходу'
     },
@@ -38,7 +36,6 @@ const Index = () => {
       id: 3,
       name: 'Садовый Страж',
       rarity: 'Редкий',
-      price: 2000,
       icon: 'Flower2',
       bonus: '+25% к урожаю'
     },
@@ -46,7 +43,6 @@ const Index = () => {
       id: 4,
       name: 'Огненный Феникс',
       rarity: 'Эпический',
-      price: 3500,
       icon: 'Bird',
       bonus: '+35% скорость'
     },
@@ -54,7 +50,6 @@ const Index = () => {
       id: 5,
       name: 'Ледяной Волк',
       rarity: 'Редкий',
-      price: 2200,
       icon: 'Snowflake',
       bonus: '+20% защита'
     },
@@ -62,7 +57,6 @@ const Index = () => {
       id: 6,
       name: 'Золотой Кролик',
       rarity: 'Обычный',
-      price: 800,
       icon: 'Rabbit',
       bonus: '+15% удача'
     }
@@ -216,13 +210,10 @@ const Index = () => {
                     <Icon name="Zap" size={16} className="text-primary" />
                     {pet.bonus}
                   </CardDescription>
-                  <div className="flex items-center justify-between">
-                    <div className="text-2xl font-bold text-primary">{pet.price} R$</div>
-                    <Button>
-                      Купить
-                      <Icon name="ShoppingCart" size={16} className="ml-2" />
-                    </Button>
-                  </div>
+                  <Button className="w-full">
+                    Узнать цену
+                    <Icon name="MessageCircle" size={16} className="ml-2" />
+                  </Button>
                 </CardContent>
               </Card>
             ))}
@@ -312,10 +303,6 @@ const Index = () => {
                 <Badge className="w-fit mb-2">Стартовый</Badge>
                 <CardTitle>Набор новичка</CardTitle>
                 <CardDescription>Идеально для начала</CardDescription>
-                <div className="pt-4">
-                  <span className="text-4xl font-bold">1500</span>
-                  <span className="text-muted-foreground"> R$</span>
-                </div>
               </CardHeader>
               <CardContent className="space-y-2">
                 <div className="flex items-center gap-2">
@@ -344,10 +331,6 @@ const Index = () => {
                 <Badge className="w-fit mb-2 bg-secondary">Продвинутый</Badge>
                 <CardTitle>Набор профи</CardTitle>
                 <CardDescription>Лучшее соотношение</CardDescription>
-                <div className="pt-4">
-                  <span className="text-4xl font-bold">4000</span>
-                  <span className="text-muted-foreground"> R$</span>
-                </div>
               </CardHeader>
               <CardContent className="space-y-2">
                 <div className="flex items-center gap-2">
@@ -377,10 +360,6 @@ const Index = () => {
                 <Badge className="w-fit mb-2 bg-accent">Премиум</Badge>
                 <CardTitle>Набор легенды</CardTitle>
                 <CardDescription>Для истинных фанатов</CardDescription>
-                <div className="pt-4">
-                  <span className="text-4xl font-bold">8000</span>
-                  <span className="text-muted-foreground"> R$</span>
-                </div>
               </CardHeader>
               <CardContent className="space-y-2">
                 <div className="flex items-center gap-2">
