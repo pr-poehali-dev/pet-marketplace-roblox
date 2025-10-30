@@ -194,10 +194,7 @@ const Index = () => {
                     <Icon name="Zap" size={16} className="text-primary" />
                     {pet.bonus}
                   </CardDescription>
-                  <Button className="w-full">
-                    Узнать цену
-                    <Icon name="MessageCircle" size={16} className="ml-2" />
-                  </Button>
+                  <Button className="w-full">45 рублей</Button>
                 </CardContent>
               </Card>
             ))}
