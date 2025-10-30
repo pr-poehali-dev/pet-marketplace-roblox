@@ -20,37 +20,31 @@ const Index = () => {
   const pets = [
     {
       id: 1,
-      name: 'Космический Друг',
       icon: 'Stars',
       bonus: '+10% к росту растений'
     },
     {
       id: 2,
-      name: 'Легендарный Дракон',
       icon: 'Flame',
       bonus: '+50% к доходу'
     },
     {
       id: 3,
-      name: 'Садовый Страж',
       icon: 'Flower2',
       bonus: '+25% к урожаю'
     },
     {
       id: 4,
-      name: 'Огненный Феникс',
       icon: 'Bird',
       bonus: '+35% скорость'
     },
     {
       id: 5,
-      name: 'Ледяной Волк',
       icon: 'Snowflake',
       bonus: '+20% защита'
     },
     {
       id: 6,
-      name: 'Золотой Кролик',
       icon: 'Rabbit',
       bonus: '+15% удача'
     }
@@ -196,7 +190,6 @@ const Index = () => {
                   </div>
                 </CardHeader>
                 <CardContent className="p-6">
-                  <CardTitle className="mb-2">{pet.name}</CardTitle>
                   <CardDescription className="flex items-center gap-2 mb-4">
                     <Icon name="Zap" size={16} className="text-primary" />
                     {pet.bonus}
