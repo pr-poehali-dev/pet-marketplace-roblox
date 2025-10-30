@@ -21,42 +21,36 @@ const Index = () => {
     {
       id: 1,
       name: 'Космический Друг',
-      rarity: 'Обычный',
       icon: 'Stars',
       bonus: '+10% к росту растений'
     },
     {
       id: 2,
       name: 'Легендарный Дракон',
-      rarity: 'Легендарный',
       icon: 'Flame',
       bonus: '+50% к доходу'
     },
     {
       id: 3,
       name: 'Садовый Страж',
-      rarity: 'Редкий',
       icon: 'Flower2',
       bonus: '+25% к урожаю'
     },
     {
       id: 4,
       name: 'Огненный Феникс',
-      rarity: 'Эпический',
       icon: 'Bird',
       bonus: '+35% скорость'
     },
     {
       id: 5,
       name: 'Ледяной Волк',
-      rarity: 'Редкий',
       icon: 'Snowflake',
       bonus: '+20% защита'
     },
     {
       id: 6,
       name: 'Золотой Кролик',
-      rarity: 'Обычный',
       icon: 'Rabbit',
       bonus: '+15% удача'
     }
@@ -199,9 +193,6 @@ const Index = () => {
                 <CardHeader className="p-0">
                   <div className="relative overflow-hidden bg-gradient-to-br from-primary/10 via-secondary/10 to-accent/10 h-64 flex items-center justify-center group-hover:from-primary/20 group-hover:via-secondary/20 group-hover:to-accent/20 transition-all duration-300">
                     <Icon name={pet.icon as any} size={120} className="text-primary group-hover:scale-110 transition-transform duration-300" />
-                    <Badge className={`absolute top-4 right-4 ${getRarityColor(pet.rarity)}`}>
-                      {pet.rarity}
-                    </Badge>
                   </div>
                 </CardHeader>
                 <CardContent className="p-6">
