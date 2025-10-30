@@ -189,12 +189,12 @@ const Index = () => {
                     <Icon name={pet.icon as any} size={80} className="text-primary group-hover:scale-110 transition-transform duration-300" />
                   </div>
                 </CardHeader>
-                <CardContent className="p-6">
+                <CardContent className="p-6 py-6 rounded-sm">
                   <CardDescription className="flex items-center gap-2 mb-4">
                     <Icon name="Zap" size={16} className="text-primary" />
                     {pet.bonus}
                   </CardDescription>
-                  <Button className="w-full">45 рублей</Button>
+                  <Button className="w-full">45 ₽</Button>
                 </CardContent>
               </Card>
             ))}
