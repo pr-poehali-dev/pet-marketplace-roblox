@@ -34,7 +34,7 @@ const Index = () => {
       id: 3,
       icon: 'Flower2',
       bonus: '+25% к урожаю',
-      price: '600 ₽'
+      price: '170 ₽'
     },
     {
       id: 4,
