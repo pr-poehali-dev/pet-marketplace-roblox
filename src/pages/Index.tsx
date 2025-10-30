@@ -23,7 +23,7 @@ const Index = () => {
       name: 'Космический Друг',
       rarity: 'Обычный',
       price: 500,
-      image: 'https://cdn.poehali.dev/projects/14d7c30c-ed85-4ef6-aba9-faf565452a6a/files/7720441b-a2ac-432a-b005-2d6a6133f6ca.jpg',
+      icon: 'Stars',
       bonus: '+10% к росту растений'
     },
     {
@@ -31,7 +31,7 @@ const Index = () => {
       name: 'Легендарный Дракон',
       rarity: 'Легендарный',
       price: 5000,
-      image: 'https://cdn.poehali.dev/projects/14d7c30c-ed85-4ef6-aba9-faf565452a6a/files/93ea24c7-eab6-4cbd-bd95-9f2051a3e3d8.jpg',
+      icon: 'Flame',
       bonus: '+50% к доходу'
     },
     {
@@ -39,7 +39,7 @@ const Index = () => {
       name: 'Садовый Страж',
       rarity: 'Редкий',
       price: 2000,
-      image: 'https://cdn.poehali.dev/projects/14d7c30c-ed85-4ef6-aba9-faf565452a6a/files/757a49fb-dacc-4e90-b6d5-7c0507310343.jpg',
+      icon: 'Flower2',
       bonus: '+25% к урожаю'
     },
     {
@@ -47,7 +47,7 @@ const Index = () => {
       name: 'Огненный Феникс',
       rarity: 'Эпический',
       price: 3500,
-      image: 'https://cdn.poehali.dev/projects/14d7c30c-ed85-4ef6-aba9-faf565452a6a/files/7720441b-a2ac-432a-b005-2d6a6133f6ca.jpg',
+      icon: 'Bird',
       bonus: '+35% скорость'
     },
     {
@@ -55,7 +55,7 @@ const Index = () => {
       name: 'Ледяной Волк',
       rarity: 'Редкий',
       price: 2200,
-      image: 'https://cdn.poehali.dev/projects/14d7c30c-ed85-4ef6-aba9-faf565452a6a/files/93ea24c7-eab6-4cbd-bd95-9f2051a3e3d8.jpg',
+      icon: 'Snowflake',
       bonus: '+20% защита'
     },
     {
@@ -63,7 +63,7 @@ const Index = () => {
       name: 'Золотой Кролик',
       rarity: 'Обычный',
       price: 800,
-      image: 'https://cdn.poehali.dev/projects/14d7c30c-ed85-4ef6-aba9-faf565452a6a/files/757a49fb-dacc-4e90-b6d5-7c0507310343.jpg',
+      icon: 'Rabbit',
       bonus: '+15% удача'
     }
   ];
@@ -172,11 +172,9 @@ const Index = () => {
             </div>
             <div className="relative animate-scale-in">
               <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-secondary/20 blur-3xl rounded-full"></div>
-              <img 
-                src="https://cdn.poehali.dev/projects/14d7c30c-ed85-4ef6-aba9-faf565452a6a/files/93ea24c7-eab6-4cbd-bd95-9f2051a3e3d8.jpg" 
-                alt="Легендарный питомец"
-                className="relative rounded-2xl shadow-2xl"
-              />
+              <div className="relative rounded-2xl shadow-2xl bg-gradient-to-br from-primary/20 via-secondary/20 to-accent/20 p-20 flex items-center justify-center backdrop-blur-sm border-2 border-primary/30">
+                <Icon name="Flame" size={200} className="text-primary" />
+              </div>
             </div>
           </div>
         </div>
@@ -205,12 +203,8 @@ const Index = () => {
             {pets.map((pet, index) => (
               <Card key={pet.id} className="overflow-hidden group hover:shadow-xl transition-all duration-300 hover:-translate-y-2 animate-fade-in" style={{ animationDelay: `${index * 100}ms` }}>
                 <CardHeader className="p-0">
-                  <div className="relative overflow-hidden bg-muted">
-                    <img 
-                      src={pet.image} 
-                      alt={pet.name}
-                      className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-300"
-                    />
+                  <div className="relative overflow-hidden bg-gradient-to-br from-primary/10 via-secondary/10 to-accent/10 h-64 flex items-center justify-center group-hover:from-primary/20 group-hover:via-secondary/20 group-hover:to-accent/20 transition-all duration-300">
+                    <Icon name={pet.icon as any} size={120} className="text-primary group-hover:scale-110 transition-transform duration-300" />
                     <Badge className={`absolute top-4 right-4 ${getRarityColor(pet.rarity)}`}>
                       {pet.rarity}
                     </Badge>
