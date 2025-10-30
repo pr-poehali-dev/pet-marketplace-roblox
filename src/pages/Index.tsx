@@ -21,32 +21,38 @@ const Index = () => {
     {
       id: 1,
       icon: 'Stars',
-      bonus: '+10% к росту растений'
+      bonus: '+10% к росту растений',
+      price: '45 ₽'
     },
     {
       id: 2,
       icon: 'Flame',
-      bonus: '+50% к доходу'
+      bonus: '+50% к доходу',
+      price: '600 ₽'
     },
     {
       id: 3,
       icon: 'Flower2',
-      bonus: '+25% к урожаю'
+      bonus: '+25% к урожаю',
+      price: '600 ₽'
     },
     {
       id: 4,
       icon: 'Bird',
-      bonus: '+35% скорость'
+      bonus: '+35% скорость',
+      price: '600 ₽'
     },
     {
       id: 5,
       icon: 'Snowflake',
-      bonus: '+20% защита'
+      bonus: '+20% защита',
+      price: '600 ₽'
     },
     {
       id: 6,
       icon: 'Rabbit',
-      bonus: '+15% удача'
+      bonus: '+15% удача',
+      price: '600 ₽'
     }
   ];
 
@@ -194,7 +200,7 @@ const Index = () => {
                     <Icon name="Zap" size={16} className="text-primary" />
                     {pet.bonus}
                   </CardDescription>
-                  <Button className="w-full">600 ₽</Button>
+                  <Button className="w-full">{pet.price}</Button>
                 </CardContent>
               </Card>
             ))}
